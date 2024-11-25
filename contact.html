@@ -27,79 +27,97 @@
   
     <!-- Styles -->
     <style>
-        /* Global Styles */
+/* General Styles */
 body {
-  background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+  background: linear-gradient(145deg, #121212, #1e1e1e);
   color: #ffffff;
   font-family: "Poppins", sans-serif;
 }
 
 h2,
 h4 {
-  color: #f5f5f5;
+  color: #ff6600;
   font-weight: 700;
   text-transform: uppercase;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+p,
+label {
+  color: #e0e0e0;
 }
 
 a {
-  color: #f5f5f5;
+  color: #ff6600;
   text-decoration: none;
   font-weight: bold;
 }
 
 a:hover {
-  color: #cccccc;
+  color: #ff4500;
 }
 
-/* Contact Section */
-#contact {
-  padding: 60px 20px;
+/* Contact Cards Section */
+#contact-cards {
+  padding: 50px 20px;
 }
 
-.contact-container {
-  background: linear-gradient(145deg, #252525, #1f1f1f);
+#contact-cards .info-box {
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#contact-cards .info-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 50px rgba(255, 102, 0, 0.6);
+}
+
+/* Make images fill the card while maintaining aspect ratio */
+.card-image {
+  width: 100%;
+  height: 100%; /* Adjust this to desired card height */
+  /* object-fit: cover;  Ensures image fills the space without distortion */
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Info Box Text Styling */
+#contact-cards h4 {
+  font-size: 20px;
+  color: #333;
+  font-weight: bold;
+}
+
+#contact-cards p {
+  color: #555;
+}
+
+/* Form Section */
+.form-container {
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   padding: 40px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
-  animation: fadeIn 1.5s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+  margin-top: 30px;
 }
 
-/* Contact Info (Location, Email, Call) */
-.info-box {
-  padding: 20px;
-  margin-bottom: 30px;
-  background: #1f1f1f;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-  transition: transform 0.3s, background-color 0.3s;
-}
-
-.info-box:hover {
-  transform: scale(1.05);
-  background-color: #2a2a2a;
-}
-
-.info-box i {
-  font-size: 28px;
-  color: #f5f5f5;
-  margin-right: 15px;
-}
-
-/* Form Styling */
+/* Form Input Fields */
 form .form-control {
-  background: #2a2a2a;
-  border: 1px solid #444444;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 102, 0, 0.4);
   color: #ffffff;
   border-radius: 8px;
-  padding: 10px 15px;
+  padding: 12px 15px;
   margin-bottom: 20px;
-  transition: box-shadow 0.3s, border-color 0.3s;
+  transition: all 0.3s ease;
 }
 
 form .form-control:focus {
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-  border-color: #f5f5f5;
+  box-shadow: 0 0 15px rgba(255, 102, 0, 0.7);
+  border-color: #ff6600;
 }
 
 form .form-control::placeholder {
@@ -107,53 +125,51 @@ form .form-control::placeholder {
   font-style: italic;
 }
 
+/* Improved Button Styling */
 form button {
-  background: #ffffff;
-  color: #000000;
+  background: #ff6600;
+  color: #ffffff;
   font-weight: bold;
   border: none;
   border-radius: 8px;
-  padding: 10px 20px;
-  transition: all 0.3s ease-in-out;
+  padding: 12px 20px;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
 }
 
 form button:hover {
-  background: #cccccc;
-  color: #000000;
-  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.5);
+  background: #ff4500;
+  box-shadow: 0 8px 20px rgba(255, 102, 0, 0.6);
 }
 
-/* Animations */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive */
+/* Responsive Styling */
 @media (max-width: 768px) {
-  #contact {
-    padding: 40px 15px;
+  #contact-cards .info-box {
+    margin-bottom: 20px;
   }
 
-  .info-box {
-    text-align: center;
+  .card-image {
+    height: 150px;
   }
 
-  .info-box i {
-    margin-bottom: 10px;
+  #contact h2 {
+    font-size: 24px;
   }
 
-  /* Form Input Layout */
+  #contact h4 {
+    font-size: 20px;
+  }
+
+  .form-container {
+    padding: 20px;
+  }
+
+  /* Form Layout Adjustments */
   .form-control {
     width: 100%;
   }
 }
+
 
       </style>
       
@@ -204,58 +220,80 @@ form button:hover {
     <p>Your Questions, Our Priority. We're Just a Message Away!</p>
   </div>
 </div>
-    <!-- Contact Section -->
-    <section id="contact" class="text-center">
-      <div class="container">
-        <div class="row contact-container">
-          <!-- Contact Info (Location, Email, Call) -->
-          <div class="col-lg-12">
-            <div class="info-box">
-              <i class="bi bi-geo-alt"></i>
-              <h4>Location</h4>
-              <p style="color: #f5f5f5;">1234 Street Name, Hyderabad, India</p>
-            </div>
-            <div class="info-box">
-              <i class="bi bi-envelope"></i>
-              <h4>Email</h4>
-              <p style="color: #f5f5f5;">info@example.com</p>
-            </div>
-            <div class="info-box">
-              <i class="bi bi-phone"></i>
-              <h4>Call</h4>
-              <p style="color: #f5f5f5;">+91 123 456 7890</p>
-            </div>
-          </div>
-    
-          <!-- Contact Form -->
-          <div class="col-lg-12">
-            <form action="#" method="post" class="mt-3">
-              <div class="row">
-                <div class="col-md-6 mb-3">
-                  <input type="text" class="form-control" name="first_name" placeholder="First Name" required />
-                </div>
-                <div class="col-md-6 mb-3">
-                  <input type="text" class="form-control" name="last_name" placeholder="Last Name" required />
-                </div>
-              </div>
-              <div class="mb-3">
-                <input type="email" class="form-control" name="email" placeholder="Your Email" required />
-              </div>
-              <div class="mb-3">
-                <input type="number" class="form-control" name="mobile" placeholder="Your Mobile" required />
-              </div>
-              <div class="mb-3">
-                <input type="url" class="form-control" name="website" placeholder="Your Website" />
-              </div>
-              <div class="mb-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Comment/Questions" required></textarea>
-              </div>
-              <button type="submit" class="btn btn-primary">Send Message</button>
-            </form>
-          </div>
+   <!-- Contact Cards -->
+<section id="contact-cards" class="text-center">
+  <div class="container">
+    <div class="row">
+      <!-- Location Card -->
+      <div class="col-lg-4">
+        <div class="info-box">
+          <img src="assets/img/contactadress.png" alt="Location" class="card-image" />
+          <h4>Location</h4>
+          <p>1234 Street Name, Hyderabad, India</p>
         </div>
       </div>
-    </section>
+      <!-- Email Card -->
+      <div class="col-lg-4">
+        <div class="info-box">
+          <img src="assets/img/contactemail.png" alt="Email" class="card-image" />
+          <h4>Email</h4>
+          <p>info@example.com</p>
+        </div>
+      </div>
+      <!-- Call Card -->
+      <div class="col-lg-4">
+        <div class="info-box">
+          <img src="assets/img/contactcall.png" alt="Call" class="card-image" />
+          <h4>Call</h4>
+          <p>+91 123 456 7890</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Form -->
+<section id="contact" class="text-center">
+  <div class="container form-container">
+    <h2>Get Started Now</h2>
+    <h4>Send us a Message</h4>
+
+    <!-- Contact Form -->
+    <form action="#" method="post" class="mt-3">
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <input type="text" class="form-control" name="first_name" placeholder="First Name" required />
+        </div>
+        <div class="col-md-6 mb-3">
+          <input type="text" class="form-control" name="last_name" placeholder="Last Name" required />
+        </div>
+      </div>
+      <div class="row">
+      <div class="col-md-6 mb-3">
+        <input type="email" class="form-control" name="email" placeholder="Your Email" required />
+      </div>
+      <div class="col-md-6 mb-3">
+        <input type="text" class="form-control" name="subject" placeholder="Subject" required />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <input type="number" class="form-control" name="mobile" placeholder="Your Mobile" required />
+      </div>
+      <div class="col-md-6 mb-3">
+        <input type="url" class="form-control" name="website" placeholder="Your Website" />
+      </div>
+    </div>
+      <div class="mb-3">
+        <label style="color: #0f0f0f; font-size: 20px;">How can we help you?</label>
+        <p style="color: #0f0f0f;">Feel free to ask a question or simply leave a comment</p>
+        <textarea class="form-control" name="message" rows="5" placeholder="Comment/Questions" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send Message</button>
+    </form>
+  </div>
+</section>
+
     
   </main>
   <section>
