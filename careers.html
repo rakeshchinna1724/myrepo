@@ -93,11 +93,8 @@ body {
 
 /* Job postings container */
 .job-listings {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    display: block;
     margin: 20px auto;
-    gap: 20px;
 }
 
 .job-posting {
@@ -105,13 +102,18 @@ body {
     border-radius: 15px;
     padding: 25px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-    width: 30%;
-    min-width: 300px;
+    /* min-width: 300px; */
     color: white;
     position: relative;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     height: 100%;
+    width: 95%;
+    margin: 20px auto; 
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+    
 }
 
 .job-posting:hover {
@@ -150,16 +152,17 @@ body {
 }
 
 .job-posting button {
-    background: #ff7f50;
+  background: #ff7f50;
     border: none;
     color: white;
-    padding: 12px 25px;
+    padding: 10px 20px; /* Adjust padding for better scaling */
     border-radius: 8px;
     cursor: pointer;
-    position: absolute;
-    right: 30px;
-    bottom: 30px;
+    margin-top: 10px; /* Add spacing to avoid overlap */
+    width: auto; /* Ensure the width scales properly */
+    font-size: 16px; /* Responsive font size */
     transition: background 0.3s ease, transform 0.3s ease;
+    position: relative; /* Remove absolute positioning */
 }
 
 .job-posting button:hover {
@@ -269,6 +272,28 @@ body {
     }
 }
 
+#jobtitleh1 {
+  text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem; /* Ensure responsive font size */
+}
+
+.jobpostingcontainer {
+    /* max-width: 1200px; Prevents content overflow */
+    margin: 0 auto;
+    padding: 0 15px; /* Add padding to ensure proper spacing */
+}
+@media (max-width: 768px) {
+    .job-posting button {
+        align-self: center; /* Center button on smaller screens */
+    }
+
+    .job-posting {
+        width: 95%; /* Adjust job posting width for smaller screens */
+        flex-direction: column;
+    }
+}
+
 
   </style>    
   </head>
@@ -330,8 +355,9 @@ body {
     </div>
 
     <section id="job-listings" class="job-listings section">
-        <div class="container">
-            <h1 class="text-center">Open Positions</h1>
+      <h1 id="jobtitleh1" class="text-center"><b>Open Positions</b></h1>
+
+        <div class="jobpostingcontainer">
             <div class="row gy-5" id="job-postings-container">
                 <!-- Job Postings -->
                 <div class="job-posting" data-role="Frontend Developer">
@@ -413,7 +439,7 @@ searchButton.addEventListener("click", () => {
     jobPostings.forEach((job) => {
         const role = job.getAttribute("data-role").toLowerCase();
         if (role.includes(query)) {
-            job.style.display = "block";
+            job.style.display = "flex";
         } else {
             job.style.display = "none";
         }
@@ -423,7 +449,7 @@ searchButton.addEventListener("click", () => {
 clearButton.addEventListener("click", () => {
     searchInput.value = "";
     jobPostings.forEach((job) => {
-        job.style.display = "block";
+        job.style.display = "flex";
     });
 });
 
