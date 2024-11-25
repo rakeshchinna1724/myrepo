@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Inofinitive SR</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/logo.jpg" rel="icon">
+  <link href="assets/img/logo.jpg" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+
+<!-- FAQ SECTION  -->
+<style>
+  /* FAQ Section */
+  .faq {
+    background: linear-gradient(135deg, #ffffff, #f9f9f9);
+    color: #333;
+    padding: 100px 10px 70px;
+    position: relative;
+  }
+
+  .section-title {
+    margin-bottom: 50px;
+    animation: fadeInDown 1s ease;
+  }
+
+  .faq-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-top: 10px;
+    animation: fadeIn 1.5s ease;
+  }
+
+  /* Accordion Styles */
+  .custom-accordion .accordion-item {
+    background: linear-gradient(135deg, #ffffff, #e9ecef);
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    animation: slideIn 1s ease forwards;
+  }
+
+  .custom-accordion .accordion-button {
+    background: #f8f9fa;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 20px;
+    border: none;
+    transition: all 0.4s ease;
+  }
+
+  .custom-accordion .accordion-button:hover {
+    background: #e0e0e0;
+    color: #333;
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  .custom-accordion .accordion-button:not(.collapsed) {
+    background: #e9ecef;
+    color: #333;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .custom-accordion .accordion-collapse {
+    background: #f9f9f9;
+    animation: fadeInUp 0.7s ease;
+  }
+
+  .custom-accordion .accordion-body {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.7;
+    padding: 20px;
+  }
+
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInDown {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  /* Glow Effect */
+  .custom-accordion .accordion-button:hover {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Responsive Adjustments */
+  @media (max-width: 768px) {
+    .faq-title {
+      font-size: 28px;
+    }
+
+    .faq-subtitle {
+      font-size: 16px;
+    }
+
+    .custom-accordion .accordion-button {
+      font-size: 16px;
+    }
+
+    .custom-accordion .accordion-body {
+      font-size: 14px;
+    }
+  }
+</style>
+
+  <!-- About Section  -->
+
+  <style>
+  /* General Section Styles */
+.about {
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #ffffff, #fff6f1);
+  position: relative;
+}
+
+.about .section-title {
+  text-align: center;
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.about .section-title h2 {
+  font-size: 50px;
+  font-weight: 700;
+  color: #ff6f3d;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.about .section-title p {
+  font-size: 20px;
+  color: #666;
+  margin: 0;
+}
+
+.about .content p.intro {
+  font-size: 18px;
+  color: #444;
+  margin-bottom: 20px;
+  font-weight: 600;
+  line-height: 1.8;
+}
+
+.about .content p span {
+  color: #ff6f3d;
+  font-weight: 700;
+}
+
+.about .content ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about .content ul li {
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.about .content ul li i {
+  color: #ff6f3d;
+  font-size: 22px;
+  margin-right: 12px;
+}
+
+.about .btn-explore {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(90deg, #ff6f3d, #e6552a);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 30px;
+  transition: all 0.3s ease;
+}
+
+.about .btn-explore:hover {
+  background: linear-gradient(90deg, #e6552a, #ff6f3d);
+  box-shadow: 0 8px 20px rgba(255, 111, 61, 0.4);
+  transform: translateY(-3px);
+}
+
+/* Image Container */
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s ease;
+}
+
+.image-container:hover img {
+  transform: scale(1.05);
+}
+
+.image-container .gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 20px;
+  background: linear-gradient(45deg, rgba(255, 111, 61, 0.3), rgba(0, 0, 0, 0.5));
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container:hover .gradient-overlay {
+  opacity: 1;
+}
+
+/* Key Highlights */
+.key-highlights {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+  gap: 20px;
+}
+
+.highlight {
+  flex: 1;
+  text-align: center;
+  padding: 30px 10px;
+  background: linear-gradient(145deg, #ff6f3d, #e6552a);
+  color: #fff;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(255, 111, 61, 0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.highlight:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(255, 111, 61, 0.6);
+}
+
+.highlight h3 {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.highlight p {
+  font-size: 18px;
+  margin: 0;
+}
+
+.highlight .highlight-icon {
+  font-size: 50px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .key-highlights {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .highlight {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .about .section-title h2 {
+    font-size: 25px;
+    letter-spacing: 1px;
+    margin-bottom: 20px
+  }
+}
+
+</style>
+
+
+<!-- Services Section -->
+<style>
+  /* Light Theme for Services Section */
+  .services {
+      background: linear-gradient(135deg, #f9f9f9, #eaeaea);
+      color: #333;
+      padding: 80px 20px;
+  }
+
+  .services .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+  }
+
+  .services .section-title h2 {
+      font-size: 40px;
+      font-weight: bold;
+      color: #ff6f61;
+      margin-bottom: 10px;
+  }
+
+  .services .section-title p {
+      font-size: 18px;
+      color: #555;
+  }
+
+  /* Service Card Styles */
+  .services .service-item {
+      background: #fff;
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+  }
+
+  .services .service-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  }
+
+  .services .service-item img {
+      width: 100%;
+      max-width: 300px;
+      height: 200px;
+      border-radius: 10px;
+      margin: 0 auto 20px;
+      object-fit: cover;
+      transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+
+  .services .service-item:hover img {
+      transform: scale(1.1);
+      opacity: 0.95;
+  }
+
+  .services .service-item h3 {
+      font-size: 22px;
+      font-weight: bold;
+      color: #ff6f61;
+      margin-bottom: 15px;
+  }
+
+  .services .service-item p {
+      font-size: 16px;
+      color: #666;
+      line-height: 1.6;
+  }
+
+  .services .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+  }
+
+  .services .col-lg-4,
+  .services .col-md-6 {
+      flex: 1 1 calc(33.333% - 20px);
+      max-width: calc(33.333% - 20px);
+  }
+
+  @media (max-width: 768px) {
+      .services .col-lg-4,
+      .services .col-md-6 {
+          flex: 1 1 100%;
+          max-width: 100%;
+      }
+
+      .services .section-title h2 {
+          font-size: 36px;
+      }
+  }
+
+  /* Add Animations */
+  .service-item {
+      animation: fadeInUp 0.5s ease-in-out;
+  }
+
+  @keyframes fadeInUp {
+      from {
+          opacity: 0;
+          transform: translateY(30px);
+      }
+      to {
+          opacity: 1;
+          transform: translateY(0);
+      }
+  }
+
+  /* Hover Effect */
+  .service-item:hover {
+      border: 2px solid #ff6f61;
+  }
+</style>
+
+  <!-- Partners working with -->
+  <style>
+    .partners {
+      background: linear-gradient(135deg, #0d0d21, #1a1a3a);
+      color: #fff;
+      padding: 50px 10px;
+      overflow: hidden;
+    }
+  
+    .partners .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+      padding: 0 20px;
+    }
+  
+    .partners .section-title h2 {
+      font-size: 2.5rem;
+      color: #f39c12;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+  
+    .partners .section-title p {
+      font-size: 1.1rem;
+      color: #dcdcdc;
+      margin: 0;
+      animation: fadeIn 2s ease-in-out;
+    }
+  
+    .partners-carousel {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      animation: scroll 15s linear infinite;
+      will-change: transform;
+    }
+  
+    .partners-carousel:hover {
+      animation-play-state: paused;
+    }
+  
+    .partner-item {
+      flex: 0 0 auto;
+      width: 150px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+  
+    .partner-item img {
+      max-width: 90%;
+      max-height: 90%;
+      filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.4));
+    }
+  
+    .partner-item:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+    }
+  
+    @keyframes scroll {
+      from {
+        transform: translateX(0%);
+      }
+      to {
+        transform: translateX(-100%);
+      }
+    }
+  
+    /* Responsive Styles */
+    @media (max-width: 1200px) {
+      .partners .section-title h2 {
+        font-size: 2.2rem;
+      }
+  
+      .partners .section-title p {
+        font-size: 1rem;
+      }
+  
+      .partners-carousel {
+        gap: 20px;
+      }
+  
+      .partner-item {
+        width: 130px;
+        height: 90px;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .partners .section-title h2 {
+        font-size: 1.8rem;
+      }
+  
+      .partners .section-title p {
+        font-size: 0.95rem;
+      }
+  
+      .partners-carousel {
+        gap: 15px;
+      }
+  
+      .partner-item {
+        width: 100px;
+        height: 70px;
+      }
+    }
+  
+    @media (max-width: 576px) {
+      .partners .section-title h2 {
+        font-size: 1.5rem;
+      }
+  
+      .partners .section-title p {
+        font-size: 0.85rem;
+      }
+  
+      .partners-carousel {
+        gap: 10px;
+      }
+  
+      .partner-item {
+        width: 80px;
+        height: 60px;
+      }
+    }
+  </style>
+
+   <!-- TEchnolhies We Wrok with  -->
+
+   <style>
+    .technologies {
+      background: linear-gradient(135deg, #0d1b2a, #1b263b);
+      color: #fff;
+      padding: 50px 10px;
+      overflow: hidden;
+    }
+  
+    .technologies .section-title {
+      text-align: center;
+      margin-bottom: 40px;
+      padding: 0 15px;
+    }
+  
+    .technologies .section-title h2 {
+      font-size: 2.5rem;
+      color: #17a2b8;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+  
+    .technologies .section-title p {
+      font-size: 1.1rem;
+      color: #dcdcdc;
+      margin: 0;
+      animation: fadeIn 2s ease-in-out;
+    }
+  
+    .technologies-carousel {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      animation: scroll 20s linear infinite;
+      will-change: transform;
+    }
+  
+    .technologies-carousel:hover {
+      animation-play-state: paused;
+    }
+  
+    .tech-item {
+      flex: 0 0 auto;
+      width: 150px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+  
+    .tech-item img {
+      max-width: 90%;
+      max-height: 90%;
+      filter: drop-shadow(0px 5px 10px rgba(0, 0, 0, 0.4));
+    }
+  
+    .tech-item:hover {
+      transform: scale(1.1);
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+    }
+  
+    @keyframes scroll {
+      from {
+        transform: translateX(0%);
+      }
+      to {
+        transform: translateX(-100%);
+      }
+    }
+  
+    /* Responsive Styles */
+    @media (max-width: 1200px) {
+      .technologies .section-title h2 {
+        font-size: 2.2rem;
+      }
+  
+      .technologies .section-title p {
+        font-size: 1rem;
+      }
+  
+      .technologies-carousel {
+        gap: 20px;
+      }
+  
+      .tech-item {
+        width: 130px;
+        height: 90px;
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .technologies .section-title h2 {
+        font-size: 1.8rem;
+      }
+  
+      .technologies .section-title p {
+        font-size: 0.95rem;
+      }
+  
+      .technologies-carousel {
+        gap: 15px;
+      }
+  
+      .tech-item {
+        width: 100px;
+        height: 70px;
+      }
+    }
+  
+    @media (max-width: 576px) {
+      .technologies .section-title h2 {
+        font-size: 1.5rem;
+      }
+  
+      .technologies .section-title p {
+        font-size: 0.85rem;
+      }
+  
+      .technologies-carousel {
+        gap: 10px;
+      }
+  
+      .tech-item {
+        width: 80px;
+        height: 60px;
+      }
+    }
+  </style>
+  
+
+  <!-- Font Awesome Icons for Social Media -->
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top" style="background: linear-gradient(145deg, #121212, #292929);">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between" >
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <img src="assets/img/logo.jpg" alt="">
+        <h1 class="sitename">Inofinitive SR</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="portfolio.html">About</a></li>
+          <li class="dropdown"><a href="service-details.html"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="service-details.html#it-services">IT Services</a></li>
+              <li><a href="service-details.html#NON-It-Services"><span>Non-It Services</span></a></li>
+              <li><a href="service-details.html#BPO-services">BPS</a></li>
+              <li><a href="service-details.html#Digital-marketing">Digital Marketing</a></li>
+              <li><a href="service-details.html#Consulting">IT Consulting</a></li>
+              <li><a href="service-details.html#SAP-Services">SAP Services</a></li>
+              <li><a href="service-details.html#staffing-Services">Staffing Services</a></li>
+
+            </ul>
+          </li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+        <!-- Slide 1 -->
+          <div class="carousel-container" >
+            <!-- Text Section -->
+            <div>
+              <h2 class="animate__animated animate__fadeInDown">
+                Welcome to <span class="typing-text">Inofinitive SR</span>
+              </h2>
+              <p class="animate__animated animate__fadeInUp">
+                At Inofinitive SR Technologies, we redefine possibilities through advanced solutions. From innovative <b><i>Application Development</i></b> to groundbreaking advancements in <b><i>Artificial Intelligence (AI)</i></b>,<b><i> Machine Learning (ML)</i></b>, and <b><i>SAP</i></b>, we enable businesses to thrive. Partner with us for strategies that boost growth, enhance efficiency, and transform your digital journey.             
+              </p>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Read More</a>
+              <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Contact</a>
+
+              <div id="heroicons" class="d-flex flex-md-row align-items-center">
+                <a href="https://www.instagram.com/inofinitive?igsh=MTRmc3BkeGF2ems4Nw==" class="icon-link">
+                  <img src="assets/img/instagram.svg" alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com/in/inofinitive-sr-technologies-2024mbnr-it-hub?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="icon-link">
+                  <img src="assets/img/linkedin.svg" alt="LinkedIn">
+                </a>
+                <a href="https://x.com/inofinitiveSR" class="icon-link">
+                  <img src="assets/img/x.svg" alt="Twitter">
+                </a>
+                <a href="https://www.facebook.com/inofinitivesrtechnologies?mibextid=ZbWKwL" class="icon-link">
+                  <img src="assets/img/facebook.svg" alt="Facebook">
+                </a>
+              </div>
+            </div>
+        
+            <!-- Image Scrolling Section -->
+            <div id="heroimg" class="hero-images">
+              <img src="assets/img/appdev.jpg" alt="Image 1" class="active">
+              <img src="assets/img/ai.jpg" alt="Image 2">
+              <img src="assets/img/sap.jpg" alt="Image 3">
+            </div>
+          </div>
+        
+      <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28 " preserveAspectRatio="none">
+        <defs>
+          <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"></path>
+        </defs>
+        <g class="wave1">
+          <use xlink:href="#wave-path" x="50" y="3"></use>
+        </g>
+        <g class="wave2">
+          <use xlink:href="#wave-path" x="50" y="0"></use>
+        </g>
+        <g class="wave3">
+          <use xlink:href="#wave-path" x="50" y="9"></use>
+        </g>
+      </svg>
+
+    </section>
+<!-- Script for carousel -->
+    <script>
+      const images = document.querySelectorAll('#heroimg img');
+      let currentIndex = 0;
+    
+      setInterval(() => {
+        images[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % images.length;
+        images[currentIndex].classList.add('active');
+      }, 3000);
+    </script>
+   
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Who We Are</h2>
+        <p>Your Trusted Technology Partner for Tomorrow</p>
+      </div>
+    
+      <div class="container">
+        <div class="row gy-5 align-items-center">
+          <!-- Content Section -->
+          <div class="col-lg-6 content" data-aos="fade-right" data-aos-delay="100">
+            <p class="intro">
+              At <span>Inofinitive SR Technologies</span>, we strive to provide cutting-edge solutions for 
+              businesses looking to thrive in today’s digital landscape.
+            </p>
+            <p>
+              From <span>software development</span> to <span>cloud solutions</span>, 
+              we are committed to delivering <span>scalable</span> and <span>innovative</span> services.
+            </p>
+            <ul>
+              <li><i class="bi bi-check2-circle"></i> <span>Tailored Software Solutions</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>Cloud Hosting & IT Support</span></li>
+              <li><i class="bi bi-check2-circle"></i> <span>Real-Time Data Analytics</span></li>
+            </ul>
+            <a href="portfolio.html" class="btn-explore">
+              Explore More <i class="bi bi-arrow-right-circle ms-2"></i>
+            </a>
+          </div>
+    
+          <!-- Image Section -->
+          <div class="col-lg-6 text-center" data-aos="zoom-in" data-aos-delay="200">
+            <div class="image-container">
+              <img src="assets/img/teamImage.jpg" alt="About Us Image" class="img-fluid rounded shadow">
+              <div class="gradient-overlay"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Key Highlights Section -->
+      <div class="container key-highlights">
+        <div class="highlight" data-aos="fade-up" data-aos-delay="300">
+          <div class="highlight-icon"><i class="bi bi-emoji-smile"></i></div>
+          <h3>100+</h3>
+          <p>Happy Clients</p>
+        </div>
+        <div class="highlight" data-aos="fade-up" data-aos-delay="400">
+          <div class="highlight-icon"><i class="bi bi-award"></i></div>
+          <h3>300+</h3>
+          <p>Successful Projects</p>
+        </div>
+        <div class="highlight" data-aos="fade-up" data-aos-delay="500">
+          <div class="highlight-icon"><i class="bi bi-calendar4"></i></div>
+          <h3>4+</h3>
+          <p>Years of Excellence</p>
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- Features Section -->
+    <section id="features" class="features section" >
+
+      <div class="container">
+        <h2 style="text-align: center;  color: black"><b>Why Choose Us?</b></h2><br>
+        <ul class="nav nav-tabs row  d-flex" data-aos="fade-up" data-aos-delay="100">
+          <li class="nav-item col-3">
+            <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#features-tab-1">
+              <i class="bi bi-binoculars"></i>
+              <h4 class="d-none d-lg-block">Excellence</h4>
+            </a>
+          </li>
+          <li class="nav-item col-3">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-2">
+              <i class="bi bi-box-seam"></i>
+              <h4 class="d-none d-lg-block">Support</h4>
+            </a>
+          </li>
+          <li class="nav-item col-3">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-3">
+              <i class="bi bi-brightness-high"></i>
+              <h4 class="d-none d-lg-block"> Trust</h4>
+            </a>
+          </li>
+          <li class="nav-item col-3">
+            <a class="nav-link" data-bs-toggle="tab" data-bs-target="#features-tab-4">
+              <i class="bi bi-command"></i>
+              <h4 class="d-none d-lg-block">Growth</h4>
+            </a>
+          </li>
+        </ul><!-- End Tab Nav -->
+
+        <div class="tab-content" data-aos="fade-up" data-aos-delay="200">
+
+          <div class="tab-pane fade active show" id="features-tab-1">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3 style="color: black">Why We Excel?</h3>
+                <p class="fst-italic" style="text-align: justify;">
+                  Excellence is our standard in everything we do. We strive to deliver services that not only meet your expectations but exceed them. Our commitment to quality ensures that every interaction, solution, and outcome is crafted with care and precision. At [Your Business Name], excellence isn’t just a goal—it’s our promise to you.
+                </p>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i>
+                    <span><b>Attention to Detail: </b> We focus on every aspect of our work, ensuring flawless execution and top-notch results.
+                    </span>
+                  </li>
+                  <li><i class="bi bi-check2-all"></i> <span><b> Commitment to Quality: </b> We maintain the highest standards in customer service and technical support to deliver unparalleled value.</span>.</li>
+                  <li><i class="bi bi-check2-all"></i> <span><b> Continuous Improvement: </b> We embrace innovation and learning to consistently enhance our services for your success.</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/working-1.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div><!-- End Tab Content Item -->
+
+          <div class="tab-pane fade" id="features-tab-2">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3 style="color: black">Why Choose Our Support?</h3>
+                <p style="text-align: justify;">
+                  Support is at the heart of what we do. We are committed to being your reliable partner, ensuring that your business runs smoothly with expert assistance every step of the way. Whether it’s addressing customer concerns, resolving technical challenges, or providing innovative solutions, we are here to make your life easier. Our team is always ready to go the extra mile to meet your needs, no matter how big or small.
+                </p>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> <span><b>Expert Assistance:</b> Our experienced team is equipped to address diverse challenges efficiently.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span><b>24/7 Availability:</b> We’re here whenever you need us, ensuring uninterrupted operations.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span><b>Proactive Approach: </b>We anticipate issues and resolve them before they impact your business.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span><b>Customized Solutions:  </b>Our support is aligned with your unique requirements and goals.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span><b>Customer-Centric:   </b>Your satisfaction is our priority, and we go the extra mile to deliver it.</span></li>
+                </ul>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/services.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div><!-- End Tab Content Item -->
+
+          <div class="tab-pane fade" id="features-tab-3">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3 style="color: black">Why Trust Us?</h3>
+                <p style="text-align: justify;">
+                  Trust is the cornerstone of our business. We understand that strong partnerships are built on a foundation of reliability, transparency, and integrity. At [Your Business Name], we go above and beyond to earn and maintain your trust, ensuring that you feel confident in every interaction with us. Our commitment to honesty and consistency sets us apart, making us a dependable partner for your business needs.
+                </p>
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> <span><b>Transparency: </b>We keep you informed at every step, ensuring complete clarity in our processes, decisions, and outcomes.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span><b>Reliability: </b></span>You can count on us to deliver on our promises, meeting your needs with consistency and dedication.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span><b>Integrity:</b> We operate with the highest ethical standards, ensuring fairness and respect in all our relationships.</span></li>
+                </ul>
+                <p class="fst-italic">
+                  With Inofinitive SR, trust isn’t just a value—it’s our promise to you.
+                </p>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/working-3.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div><!-- End Tab Content Item -->
+
+          <div class="tab-pane fade" id="features-tab-4">
+            <div class="row">
+              <div class="col-lg-6 order-2 order-lg-1 mt-3 mt-lg-0">
+                <h3 style="color: black;">How We Drive Growth?</h3>
+                <p style="text-align: justify;">
+                  At Inofinitive SR, your growth is our priority. We are more than just a service provider—we’re a partner invested in your success. Our expertise and innovative solutions help you overcome challenges, unlock new opportunities, and take your business to the next level. Together, we’ll create a path to sustained growth and prosperity.
+
+
+                </p>
+               
+                <ul>
+                  <li><i class="bi bi-check2-all"></i> <span><b>Strategic Partnership:</b> We work alongside you, aligning our efforts with your goals to achieve measurable success..</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span><b>Scalable Solutions:</b> Our services are designed to adapt as your business grows, ensuring seamless transitions at every stage.</span></li>
+                  <li><i class="bi bi-check2-all"></i> <span><b>Empowering Innovation: </b>We equip you with the tools and strategies needed to stay ahead in a competitive market.</span></li>
+                </ul>
+                <p class="fst-italic">
+                  With Inofinitive SR, trust, support, excellence, and growth are more than just words—they’re the foundation of our commitment to you.
+                </p>
+              </div>
+              <div class="col-lg-6 order-1 order-lg-2 text-center">
+                <img src="assets/img/working-4.jpg" alt="" class="img-fluid">
+              </div>
+            </div>
+          </div><!-- End Tab Content Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Features Section -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+      <!-- Section Title -->
+      <div class="container section-title">
+          <h2>Our Services</h2>
+          <p>Discover What We Offer</p>
+      </div>
+  
+      <div class="container">
+          <div class="row">
+              <!-- Service Card 1 -->
+              <div class="col-lg-4 col-md-6">
+                  <div class="service-item">
+                      <img src="assets/img/appdevservice.png" alt="IT Services">
+                      <h3>App Development</h3>
+                      <p>Building seamless, smart, and scalable apps to power your success</p>
+                  </div>
+              </div>
+              <!-- Service Card 2 -->
+              <div class="col-lg-4 col-md-6">
+                  <div class="service-item">
+                      <img src="assets/img/customercare.jpg" alt="Non-IT Services">
+                      <h3>Customer Support</h3>
+                      <p>Delivering exceptional customer support solutions that prioritize satisfaction and efficiency.</p>
+                  </div>
+              </div>
+              <!-- Service Card 3 -->
+              <div class="col-lg-4 col-md-6">
+                  <div class="service-item">
+                      <img src="assets/img/aiservice.jpg" alt="BPO Services">
+                      <h3>Artificial Intelligence</h3>
+                      <p>Empowering innovation with cutting-edge AI solutions for smarter decisions and future-ready businesses.</p>
+                  </div>
+              </div>
+              <!-- Service Card 4 -->
+              <div class="col-lg-4 col-md-6">
+                  <div class="service-item">
+                      <img src="assets/img/dmservice.jpg" alt="Digital Marketing">
+                      <h3>Digital Marketing</h3>
+                      <p>Driving growth and success with data-driven digital marketing solutions.</p>
+                  </div>
+              </div>
+              <!-- Service Card 5 -->
+              <div class="col-lg-4 col-md-6">
+                  <div class="service-item">
+                      <img src="assets/img/consultantservice.jpg" alt="Consulting">
+                      <h3>Staffing Services</h3>
+                      <p>Connecting skilled talent with the right opportunities,Empowering businesses to achieve their goals.</p>
+                  </div>
+              </div>
+              <!-- Service Card 6 -->
+              <div class="col-lg-4 col-md-6">
+                  <div class="service-item">
+                      <img src="assets/img/sap.jpg" alt="SAP Services">
+                      <h3>SAP Services</h3>
+                      <p>Transforming businesses with scalable, intelligent, and tailored SAP solutions for all your operational needs.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </section><!-- /Services Section -->    
+
+
+  <!-- Technologies we Wrok with  -->
+
+  <section id="technologies" class="technologies section">
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <h2>Technologies We Use</h2>
+      <p>Empowering businesses with the best technologies in the industry</p>
+    </div>
+  
+    <div class="container">
+      <div class="technologies-carousel" data-aos="fade-up" data-aos-delay="100">
+        <div class="tech-item"><img src="assets/img/technolgies/python.svg" alt="Python"></div>
+        <div class="tech-item"><img src="assets/img/technolgies/nodejs.svg" alt="Node.js"></div>
+        <div class="tech-item"><img src="assets/img/technolgies/java.svg" alt="Java"></div>
+        <div class="tech-item"><img src="assets/img/technolgies/aws.svg" alt="AWS"></div>
+        <div class="tech-item"><img src="assets/img/technolgies/docker.svg" alt="Docker"></div>
+        <div class="tech-item"><img src="assets/img/technolgies/c.svg" alt="C"></div>
+        <div class="tech-item"><img src="assets/img/technolgies/php.svg" alt="PHP"></div>
+        <div class="tech-item"><img src="assets/img/technolgies/swift.svg" alt="Swift"></div>
+        <div class="tech-item"><img src="assets/img/technolgies/javascript.svg" alt="JavaScript"></div>
+      </div>
+    </div>
+  </section>
+  
+  
+
+    <!-- Faq Section -->
+    <section id="faq" class="faq section">
+      <!-- Section Title -->
+      <div class="container section-title text-center" data-aos="fade-up">
+        <h2 style="font-size: 2.5rem;
+        color: #f39c12;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        animation: fadeIn 1.5s ease-in-out;"><b>FAQ's</b></h2>
+        <p class="faq-subtitle">Find answers to the most common queries about our services</p>
+      </div>
+    
+      <div class="container" data-aos="fade-up">
+        <div class="row justify-content-center">
+          <div class="col-md-10">
+            <div class="accordion custom-accordion" id="accordion-faq">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-faq-1" aria-expanded="true">
+                    What services does Inofinitive SR offer?
+                  </button>
+                </h2>
+                <div id="collapse-faq-1" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion-faq">
+                  <div class="accordion-body">
+                    -> We offer a range of services including customer support, technical support, and telemarketing services to meet your business needs.
+                  </div>
+                </div>
+              </div>
+              <!-- Accordion Item -->
+    
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-faq-2" aria-expanded="false">
+                    How can I contact customer support?
+                  </button>
+                </h2>
+                <div id="collapse-faq-2" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion-faq">
+                  <div class="accordion-body">
+                    -> You can reach our customer support via phone, email, or through our website’s contact form. We are available 24/7 to assist you.
+                  </div>
+                </div>
+              </div>
+              <!-- Accordion Item -->
+    
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-faq-3" aria-expanded="false">
+                    Do you provide technical support for software issues?
+                  </button>
+                </h2>
+                <div id="collapse-faq-3" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordion-faq">
+                  <div class="accordion-body">
+                    -> Yes, our technical support team is equipped to handle software and hardware issues efficiently and effectively.
+                  </div>
+                </div>
+              </div>
+              <!-- Accordion Item -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- partners working with -->
+
+    <section id="partners" class="partners section">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Our Partners</h2>
+        <p>Collaborating with industry leaders to deliver excellence</p>
+      </div>
+    
+      <div class="container">
+        <div class="partners-carousel" data-aos="fade-up" data-aos-delay="100">
+          <div class="partner-item"><img src="assets/img/partners/flipkart.svg" alt="Partner 1"></div>
+          <div class="partner-item"><img src="assets/img/partners/param.jpg" alt="Partner 2"></div>
+          <div class="partner-item"><img src="assets/img/partners/WIT_BIG.svg" alt="Partner 3"></div>
+          <div class="partner-item"><img src="assets/img/partners/CTSH_BIG.svg" alt="Partner 4"></div>
+          <div class="partner-item"><img src="assets/img/partners/walmart.svg" alt="Partner 5"></div>
+          <div class="partner-item"><img src="assets/img/partners/partner6.png" alt="Partner 6"></div>
+          <div class="partner-item"><img src="assets/img/partners/partner6.png" alt="Partner 7"></div>
+          <div class="partner-item"><img src="assets/img/partners/partner6.png" alt="Partner 8"></div>
+          <div class="partner-item"><img src="assets/img/partners/partner6.png" alt="Partner 9"></div>
+          <div class="partner-item"><img src="assets/img/partners/partner6.png" alt="Partner 10"></div>
+          <div class="partner-item"><img src="assets/img/partners/partner6.png" alt="Partner 11"></div>
+          <div class="partner-item"><img src="assets/img/partners/partner6.png" alt="Partner 12"></div>
+        </div>
+      </div>
+    </section>
+    
+    
+    
+<!-- --------------------------Email js script ---------------------------- -->
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function() {
+        emailjs.init("DE7l6B5A8yl5l0LIH"); // Replace with your EmailJS public key
+        console.log("EMAIL IS HERE")
+      })();
+    
+      document.querySelector(".php-email-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+    
+        const form = event.target;
+        const formData = new FormData(form);
+    
+        console.log(" EMAIL IS @ ",formData)
+        emailjs.sendForm("service_f5s2f3r", "template_67u4k0g", form)
+          .then(
+            function(response) {
+              console.log(" EMAIL IS abhi ",formData)
+              alert("Message sent successfully!");
+            },
+            function(error) {
+              console.log(" EMAIL IS error ",formData)
+              alert("Failed to send message. Please try again.");
+            }
+          );
+      });
+    </script>
+  </main>
+
+  <!-- Chat icon -->
+  <section>
+    <!-- Chat Icon -->
+    <div class="chat-icon" id="chatButton" onclick="toggleIcons()">
+      <i class="bi bi-chat-dots"></i>
+    </div>
+  
+    <!-- Expandable Icons -->
+    <div class="expand-icons" id="iconContainer">
+      <div class="icon" onclick="window.location.href='https:\/\/wa.me/+917416305104'">
+        <i class="bi bi-whatsapp"></i>
+      </div>
+      <div class="icon" onclick="window.location.href='mailto:support@inofinitivesr.com'">
+        <i class="bi bi-envelope"></i>
+      </div>
+      <div class="icon" onclick="window.location.href='tel:+917416305104'">
+        <i class="bi bi-telephone"></i>
+      </div>
+      <div class="icon" onclick="toggleIcons()">
+        <i class="bi bi-x"></i>
+      </div>
+    </div>
+  </section>
+  <!-- Chat icon script -->
+  <script>
+    const chatButton = document.getElementById('chatButton');
+    const iconContainer = document.getElementById('iconContainer');
+  
+    function toggleIcons() {
+      chatButton.classList.toggle('d-none');
+      iconContainer.classList.toggle('active');
+    }
+  </script>
+  <!-- Footer section -->
+  <footer id="footer" class="footer" style=" background: linear-gradient(145deg, #1a1a1a, #0f0f0f);">
+    <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-center text-center text-lg-start">
+      <!-- Section 1: Logo and Social Media -->
+      <div class="footer-section text-center mb-4 mb-lg-0">
+        <img src="assets/img/logo.jpg" alt="Inofinitive SR Logo" style="width: 200px; border-radius: 50%; box-shadow: 0 8px 20px rgba(238, 238, 237, 0.949); margin-bottom: 25px;">
+        <div class="social-links d-flex justify-content-center">
+          <a href="https://www.instagram.com/inofinitive?igsh=MTRmc3BkeGF2ems4Nw==" class="me-3">
+            <img src="assets/img/instagram.svg" alt="Instagram">
+          </a>
+          <a href="https://www.linkedin.com/in/inofinitive-sr-technologies-2024mbnr-it-hub?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="me-3">
+            <img src="assets/img/linkedin.svg" alt="LinkedIn">
+          </a>
+          <a href="https://x.com/inofinitiveSR" class="me-3">
+            <img src="assets/img/x.svg" alt="Twitter">
+          </a>
+          <a href="https://www.facebook.com/inofinitivesrtechnologies?mibextid=ZbWKwL">
+            <img src="assets/img/facebook.svg" alt="Facebook">
+          </a>
+        </div>
+      </div>
+  
+      <!-- Section 2: Quick Links -->
+      <div class="footer-section">
+        <h5>Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="portfolio.html">About Us</a></li>
+          <li><a href="service-details.html">Services</a></li>
+          <li><a href="training.html">Training</a></li>
+          <li><a href="careers.html">Careers</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+  
+      <!-- Section 3: Contact Details -->
+      <div class="footer-section">
+        <h5>Contact Us</h5>
+        <p>Email: <a href="mailto:info@inofinitive.com">support@inofinitivesr.com</a></p>
+        <p>Phone: <a href="tel:+7416305104">+91-7416305104</a></p>
+      </div>
+  
+      <!-- Section 4: Newsletter -->
+      <div class="footer-section text-center text-lg-start">
+        <h5>Subscribe to our Newsletter</h5>
+        <p>Stay updated with our latest news and offers.</p>
+        <form>
+          <input type="email" placeholder="Enter your email" required>
+          <br>
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  
+    <!-- Footer Bottom -->
+    <div class="container text-center mt-5">
+      <hr>
+      <p>© 2024 <strong>Inofinitive SR</strong>. All Rights Reserved.</p>
+    </div>
+  </footer>
+ 
+  
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

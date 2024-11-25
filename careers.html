@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Careers - Inofinitive SR</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicons -->
+    <link href="assets/img/logo.jpg" rel="icon" />
+    <link href="assets/img/logo.jpg" rel="apple-touch-icon" />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+    <style>
+
+.search-bar {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 80%;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+.search-bar input:focus {
+    border-color: #007bff;
+}
+
+      .job-posting {
+        background: linear-gradient(135deg, #1e3c72, #2a5298);
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+  }
+
+  .job-posting:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  .job-posting::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .job-posting:hover::before {
+    opacity: 1;
+  }
+
+  .job-posting h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #f0f0f0;
+  }
+
+  .job-posting p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #dcdcdc;
+  }
+
+  .job-posting button {
+    background: #ff7f50;
+    border: none;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+
+  .job-posting button:hover {
+    background: #ff4500;
+    transform: translateY(-3px);
+  }
+    .job-listings .job-posting {
+  background: linear-gradient(135deg, #f0f4f8 30%, #d6dee1);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  height: 100%;
+  background-size: 400% 400%;
+  animation: shine 3s infinite;
+}
+
+.job-listings .job-posting:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-position: 100% 100%;
+}
+
+.job-listings .job-posting h3 {
+  color: #333;
+  font-weight: 600;
+}
+
+.job-listings .job-posting p {
+  color: #555;
+  margin: 10px 0;
+}
+
+.job-listings .job-posting button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.job-listings .job-posting button:hover {
+  background-color: #0056b3;
+}
+
+.apply-form-modal {
+  display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.apply-form-modal-content {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 100px auto;
+  position: relative;
+}
+
+.apply-form-modal-content .close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .job-listings .job-posting {
+    margin-bottom: 20px;
+  }
+}
+
+.apply-form-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.apply-form-modal-content {
+  width: 50%;
+  padding: 20px;
+  background: #2c2c2c;
+  border-radius: 10px;
+  color: white;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* Shine Animation */
+@keyframes shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+  </style>    
+  </head>
+
+  <body class="service-details-page">
+    <header id="header" class="header d-flex align-items-center fixed-top" style="background: linear-gradient(145deg, #121212, #292929);">
+      <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between" >
+  
+        <a href="index.html" class="logo d-flex align-items-center">
+          <img src="assets/img/logo.jpg" alt="">
+          <h1 class="sitename">Inofinitive SR</h1>
+        </a>
+  
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="portfolio.html">About</a></li>
+            <li class="dropdown"><a href="service-details.html"><span>Services</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="service-details.html#it-services">IT Services</a></li>
+                <li><a href="service-details.html#NON-It-Services"><span>Non-It Services</span></a></li>
+                <li><a href="service-details.html#BPO-services">BPS</a></li>
+                <li><a href="service-details.html#Digital-marketing">Digital Marketing</a></li>
+                <li><a href="service-details.html#Consulting">IT Consulting</a></li>
+                <li><a href="service-details.html#SAP-Services">SAP Services</a></li>
+                <li><a href="service-details.html#staffing-Services">Staffing Services</a></li>
+
+              </ul>
+            </li>
+            <li><a href="training.html">Training</a></li>
+            <li><a href="careers.html" class="active">Careers</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+  
+      </div>
+    </header>
+
+    <main class="main">
+      <div
+        class="page-title dark-background"
+        style="
+          background-image: url('assets/img/teamImage.jpg');
+          background-size: cover;
+          background-position: center;
+          padding: 100px 0;
+        "
+      >
+        <div class="container position-relative">
+          <h1>Your Future Starts Here – Be Part of Something Exciting!</h1>
+        </div>
+      </div>
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search for job roles..." oninput="filterJobs()">
+    </div>
+    
+      <section id="job-listings" class="job-listings section" style="background-color: #f4f4f4; color: #333; padding: 40px; border-radius: 10px;">
+        <div class="container">
+          <h1 class="text-center" style="font-family: 'Arial', sans-serif; color: #1d3557; margin-bottom: 40px;">Open Positions</h1>
+          <div class="row gy-5">
+            <!-- Job Postings -->
+            <div class="col-md-12">
+              <div class="job-listings-container" style="width: 100%; margin: 0 auto;">
+                <!-- Frontend Developer -->
+                <div class="job-posting" onclick="openApplyForm(1, 'Frontend Developer', 'Building and maintaining user interfaces using React.js. Skills required: HTML, CSS, JavaScript, React.js, Git. Experience: 2+ years in front-end development.')" style="background: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                  <h3 style="font-family: 'Arial', sans-serif; color: #1d3557;">Frontend Developer</h3>
+                  <p><strong>Job Description:</strong> Building and maintaining user interfaces using React.js.</p>
+                  <p><strong>Required Skills:</strong> HTML, CSS, JavaScript, React.js, Git</p>
+                  <p><strong>Experience:</strong> 2+ years in front-end development.</p>
+                  <button onclick="openApplyForm(1, 'Frontend Developer', 'Building and maintaining user interfaces using React.js. Skills required: HTML, CSS, JavaScript, React.js, Git. Experience: 2+ years in front-end development.')" style="background-color: #1d3557; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Apply</button>
+                </div>
+      
+                <!-- Backend Developer -->
+                <div class="job-posting" onclick="openApplyForm(2, 'Backend Developer', 'Work with Node.js and Express.js to build scalable backend services. Skills required: Node.js, Express.js, MongoDB, APIs. Experience: 3+ years in backend development.')" style="background: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                  <h3 style="font-family: 'Arial', sans-serif; color: #1d3557;">Backend Developer</h3>
+                  <p><strong>Job Description:</strong> Work with Node.js and Express.js to build scalable backend services.</p>
+                  <p><strong>Required Skills:</strong> Node.js, Express.js, MongoDB, APIs</p>
+                  <p><strong>Experience:</strong> 3+ years in backend development.</p>
+                  <button onclick="openApplyForm(2, 'Backend Developer', 'Work with Node.js and Express.js to build scalable backend services. Skills required: Node.js, Express.js, MongoDB, APIs. Experience: 3+ years in backend development.')" style="background-color: #1d3557; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Apply</button>
+                </div>
+      
+                <!-- Full Stack Developer -->
+                <div class="job-posting" onclick="openApplyForm(3, 'Full Stack Developer', 'Proficient in frontend and backend technologies to build applications. Skills required: React.js, Node.js, Express.js, MongoDB. Experience: 4+ years in full-stack development.')" style="background: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);">
+                  <h3 style="font-family: 'Arial', sans-serif; color: #1d3557;">Full Stack Developer</h3>
+                  <p><strong>Job Description:</strong> Proficient in frontend and backend technologies to build applications.</p>
+                  <p><strong>Required Skills:</strong> React.js, Node.js, Express.js, MongoDB</p>
+                  <p><strong>Experience:</strong> 4+ years in full-stack development.</p>
+                  <button onclick="openApplyForm(3, 'Full Stack Developer', 'Proficient in frontend and backend technologies to build applications. Skills required: React.js, Node.js, Express.js, MongoDB. Experience: 4+ years in full-stack development.')" style="background-color: #1d3557; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer;">Apply</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <!-- Modal for Apply Form -->
+      <div id="apply-form-modal" class="apply-form-modal" style="display: none;">
+        <div class="apply-form-modal-content" style="background: #ffffff; color: #333; border-radius: 10px; padding: 30px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
+          <span class="close-btn" onclick="closeApplyForm()" style="color: #1d3557; font-size: 30px; cursor: pointer;">&times;</span>
+          <h2 style="text-align: center; color: #1d3557; font-family: 'Arial', sans-serif;">Apply for the Job</h2>
+          <p id="job-description" style="color: #333;"></p>
+          <form id="apply-form">
+            <div class="mb-3">
+              <label for="name" style="color: #1d3557; font-family: 'Arial', sans-serif;">Full Name</label>
+              <input type="text" id="name" name="name" class="form-control" required style="background: #f4f4f4; color: #333; border-radius: 8px; border: 1px solid #ddd; padding: 10px;" />
+            </div>
+            <div class="mb-3">
+              <label for="mobile" style="color: #1d3557; font-family: 'Arial', sans-serif;">Mobile Number</label>
+              <input type="text" id="mobile" name="mobile" class="form-control" required style="background: #f4f4f4; color: #333; border-radius: 8px; border: 1px solid #ddd; padding: 10px;" />
+            </div>
+            <div class="mb-3">
+              <label for="email" style="color: #1d3557; font-family: 'Arial', sans-serif;">Email Address</label>
+              <input type="email" id="email" name="email" class="form-control" required style="background: #f4f4f4; color: #333; border-radius: 8px; border: 1px solid #ddd; padding: 10px;" />
+            </div>
+            <div class="mb-3">
+              <label for="resume" style="color: #1d3557; font-family: 'Arial', sans-serif;">Resume Link (URL)</label>
+              <input type="url" id="resume" name="resume" class="form-control" placeholder="Enter the link to your resume" required style="background: #f4f4f4; color: #333; border-radius: 8px; border: 1px solid #ddd; padding: 10px;" />
+            </div>
+            <div class="mb-3">
+              <label for="cv" style="color: #1d3557; font-family: 'Arial', sans-serif;">Upload CV</label>
+              <input type="file" id="cv" name="cv" class="form-control" required style="background: #f4f4f4; color: #333; border-radius: 8px; border: 1px solid #ddd; padding: 10px;" />
+            </div>
+      
+            <input type="hidden" id="jobId" name="job_id" />
+      
+            <div class="mb-3">
+              <button type="submit" class="btn btn-primary" style="background: #1d3557; color: white; border: none; padding: 12px 20px; border-radius: 8px; font-size: 16px; cursor: pointer;">Submit Application</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      
+      
+      <!-- Modal Styles -->
+     
+      
+      <script>
+        function openApplyForm(jobId, jobTitle, jobDescription) {
+          document.getElementById('job-description').innerText = jobDescription;
+          document.getElementById('jobId').value = jobId;
+          document.getElementById('apply-form-modal').style.display = 'flex';
+        }
+      
+        function closeApplyForm() {
+          document.getElementById('apply-form-modal').style.display = 'none';
+        }
+      
+        // Optionally, handle form submission
+        document.getElementById('apply-form').addEventListener('submit', function (e) {
+          e.preventDefault();
+          alert('Your application has been submitted!');
+          closeApplyForm();
+        });
+      </script>
+      
+      
+    </main>
+     <!-- Chat icon -->
+  <section>
+    <!-- Chat Icon -->
+    <div class="chat-icon" id="chatButton" onclick="toggleIcons()">
+      <i class="bi bi-chat-dots"></i>
+    </div>
+  
+    <!-- Expandable Icons -->
+    <div class="expand-icons" id="iconContainer">
+      <div class="icon" onclick="window.location.href='https://wa.me/your-number'">
+        <i class="bi bi-whatsapp"></i>
+      </div>
+      <div class="icon" onclick="window.location.href='mailto:your-email@example.com'">
+        <i class="bi bi-envelope"></i>
+      </div>
+      <div class="icon" onclick="window.location.href='tel:+1234567890'">
+        <i class="bi bi-telephone"></i>
+      </div>
+      <div class="icon" onclick="toggleIcons()">
+        <i class="bi bi-x"></i>
+      </div>
+    </div>
+  </section>
+  <!-- Chat icon script -->
+  <script>
+    const chatButton = document.getElementById('chatButton');
+    const iconContainer = document.getElementById('iconContainer');
+  
+    function toggleIcons() {
+      chatButton.classList.toggle('d-none');
+      iconContainer.classList.toggle('active');
+    }
+  </script>
+    <footer id="footer" class="footer" style=" background: linear-gradient(145deg, #1a1a1a, #0f0f0f);">
+      <div class="container d-flex flex-column flex-lg-row justify-content-between align-items-center text-center text-lg-start">
+        <!-- Section 1: Logo and Social Media -->
+        <div class="footer-section text-center mb-4 mb-lg-0">
+          <img src="assets/img/logo.jpg" alt="Inofinitive SR Logo" style="width: 200px; border-radius: 50%; box-shadow: 0 8px 20px rgba(238, 238, 237, 0.949); margin-bottom: 25px;">
+          <div class="social-links d-flex justify-content-center">
+            <a href="https://www.instagram.com/inofinitive?igsh=MTRmc3BkeGF2ems4Nw==" class="me-3">
+              <img src="assets/img/instagram.svg" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com/in/inofinitive-sr-technologies-2024mbnr-it-hub?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="me-3">
+              <img src="assets/img/linkedin.svg" alt="LinkedIn">
+            </a>
+            <a href="https://x.com/inofinitiveSR" class="me-3">
+              <img src="assets/img/x.svg" alt="Twitter">
+            </a>
+            <a href="https://www.facebook.com/inofinitivesrtechnologies?mibextid=ZbWKwL">
+              <img src="assets/img/facebook.svg" alt="Facebook">
+            </a>
+          </div>
+        </div>
+    
+        <!-- Section 2: Quick Links -->
+        <div class="footer-section">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="portfolio.html">About Us</a></li>
+            <li><a href="service-details.html">Services</a></li>
+            <li><a href="training.html">Training</a></li>
+            <li><a href="careers.html">Careers</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+    
+        <!-- Section 3: Contact Details -->
+        <div class="footer-section">
+          <h5>Contact Us</h5>
+          <p>Email: <a href="mailto:info@inofinitive.com">support@inofinitivesr.com</a></p>
+          <p>Phone: <a href="tel:+7416305104">+91-7416305104</a></p>
+        </div>
+    
+        <!-- Section 4: Newsletter -->
+        <div class="footer-section text-center text-lg-start">
+          <h5>Subscribe to our Newsletter</h5>
+          <p>Stay updated with our latest news and offers.</p>
+          <form>
+            <input type="email" placeholder="Enter your email" required>
+            <br>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    
+      <!-- Footer Bottom -->
+      <div class="container text-center mt-5">
+        <hr>
+        <p>© 2024 <strong>Inofinitive SR</strong>. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <!-- email js script -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function () {
+        emailjs.init("DE7l6B5A8yl5l0LIH"); // Replace with your EmailJS public key
+        console.log("EMAIL IS HERE");
+      })();
+
+      document
+        .querySelector("#apply-form")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const form = event.target;
+          const formData = new FormData(form);
+
+          console.log(" EMAIL IS @ ", formData);
+          emailjs.sendForm("service_f5s2f3r", "template_67u4k0g", form).then(
+            function (response) {
+              console.log(" EMAIL IS abhi ", formData);
+              alert("Message sent successfully!");
+            },
+            function (error) {
+              console.log(" EMAIL IS error ", formData);
+              alert("Failed to send message. Please try again.");
+            }
+          );
+        });
+    </script>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ></a>
+
+    <!-- Preloader -->
+    <div id="preloader"></div>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script>
+      function openApplyForm() {
+        document.getElementById("apply-form-modal").style.display = "block";
+      }
+
+      function closeApplyForm() {
+        document.getElementById("apply-form-modal").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
